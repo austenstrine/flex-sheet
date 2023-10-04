@@ -1,0 +1,152 @@
+:root {
+	--viewport-element--large : calc(1vw + 1vh);
+	--viewport-element : calc(var(--viewport-element--large) / 2);
+	--viewport-element--small : calc(var(--viewport-element--large) / 4);
+	--viewport-element--tiny : calc(var(--viewport-element--large) / 8);
+}
+.margin--percent {
+	margin-left: 6%;
+	margin-right: 6%;
+	width: 88%;
+}
+.margin--percent-large {
+	margin-left: 15%;
+	margin-right: 15%;
+	width: 70%;
+}
+.margin--viewport--large {
+  margin: var(--viewport-element--large);
+}
+.margin--viewport--large.viewport--halve-width {
+  margin-left: var(--viewport-element);
+  margin-right: var(--viewport-element);
+}
+.margin--viewport--large.viewport--halve-height {
+  margin-top: var(--viewport-element);
+  margin-bottom: var(--viewport-element);
+}
+.flex--gap-large {
+  gap: var(--viewport-element--large);
+}
+
+.margin--viewport {
+  margin: var(--viewport-element);
+}
+.margin--viewport.viewport--halve-width {
+  margin-left: var(--viewport-element--small);
+  margin-right: var(--viewport-element--small);
+}
+.margin--viewport.viewport--halve-height {
+  margin-top: var(--viewport-element--small);
+  margin-bottom: var(--viewport-element--small);
+}
+.flex--gap {
+  gap: var(--viewport-element);
+}
+
+.margin--viewport--small {
+  margin: var(--viewport-element--small);
+}
+.margin--viewport--small.viewport--halve-width {
+  margin-left: var(--viewport-element--tiny);
+  margin-right: var(--viewport-element--tiny);
+}
+.margin--viewport--small.viewport--halve-height {
+  margin-top: var(--viewport-element--tiny);
+  margin-bottom: var(--viewport-element--tiny);
+}
+.flex--gap-small {
+  gap: var(--viewport-element--small);
+}
+
+.margin--viewport--tiny {
+  margin: var(--viewport-element--tiny);
+}
+.margin--viewport--tiny.viewport--halve-width {
+  margin-left: calc(var(--viewport-element--tiny) / 2);
+  margin-right: calc(var(--viewport-element--tiny) / 2);
+}
+.margin--viewport--tiny.viewport--halve-height {
+  margin-top: calc(var(--viewport-element--tiny) / 2);
+  margin-bottom: calc(var(--viewport-element--tiny) / 2);
+}
+.flex--gap-tiny {
+  gap: var(--viewport-element--tiny);
+}
+.flex-row {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: nowrap;
+}
+.flex-column {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.flex-column * {
+	max-width: 100%;
+}
+.flex--v-center {
+	align-items: center;
+}
+.flex-item--v-center {
+	align-self: center;
+	width: 100%;
+}
+.flex--justify-start {
+	justify-content: flex-start;
+}
+.flex--justify-end {
+	justify-content: flex-end;
+}
+.flex--justify-between {
+	justify-content: space-between;
+}
+.flex--justify-around {
+	justify-content: space-around;
+}
+.flex--justify-center {
+	justify-content: center;
+}
+.flex--align-start {
+	align-items: flex-start;
+}
+.flex--align-center {
+	align-items: center;
+}
+.flex--align-end {
+	align-items: flex-end;
+}
+.flex--align-stretch {
+	align-items: stretch;
+}
+.flex--wrap {
+	flex-wrap: wrap;
+}
+.flex--nowrap {
+	flex-wrap: nowrap;
+}
+.flex--element-fill {
+	flex-grow: 2;
+}
+.unselectable-string {
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+	-webkit-touch-callout: none;
+}
+.unbreakable-string {
+	-webkit-hyphens: unset !important;
+	-moz-hyphens: unset !important;
+	-ms-hyphens: unset !important;
+	hyphens: unset !important;
+
+	overflow-wrap: unset !important;
+	white-space: nowrap !important;
+	word-break: unset !important;
+	word-wrap: unset !important;
+}
